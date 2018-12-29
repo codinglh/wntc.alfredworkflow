@@ -93,6 +93,7 @@ def checkCosConfig():
 上传到阿里云
 """
 def uploadOssObj(objtype, name, obj):
+    return
     try:
         import oss2
     except:
@@ -134,7 +135,7 @@ def uploadCosObj(objtype, name, obj):
 
 def getCosMKurl(upload_name):
     if 'true' == cos_is_cdn:
-        return '![](http://%s.cossh.myqcloud.com/%s)' % (cos_bucket_name,upload_name)
+        return '![](http://%s.cos.ap-guangzhou.myqcloud.com/%s)' % (cos_bucket_name,upload_name)
     else:
         return '![](http://%s.file.myqcloud.com/%s)' % (cos_bucket_name,upload_name)
 
